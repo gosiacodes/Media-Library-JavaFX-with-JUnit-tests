@@ -1,0 +1,26 @@
+.root {
+	-fx-background-color: #333333;
+}
+
+.label {
+	-fx-text-fill: White;
+	-fx-text-size: 15pt;
+	-fx-fount-weight: bold;
+}
+
+.button {
+	-fx-background-color: DARKGOLDENROD;
+	-fx-text-fill: White;
+	-fx-pref-width: 125px;
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.button:hover{
+	-fx-opacity: 0.7;
+}
+
+.radio-button {
+	-fx-text-fill: White;
+}
+
+
