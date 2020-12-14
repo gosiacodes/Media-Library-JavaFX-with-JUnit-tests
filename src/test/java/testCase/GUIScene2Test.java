@@ -38,7 +38,7 @@ public class GUIScene2Test extends JavaFXTest {
 	public void teardown() {
 		driver.quit();
 	}
-	
+
 	// Test "search" button with search text "city"
 	@Test
 	public void testSearch() throws InterruptedException {
@@ -50,44 +50,44 @@ public class GUIScene2Test extends JavaFXTest {
 		searchButton.click();
 		assertNotNull(gui.theTextArea.getItems());
 	}
-	
+
 	// Test "borrowed" button
 	@Test
 	public void testSearchBorrowed() throws InterruptedException {
 		WebElement borrowedButton = driver.findElement(By.cssSelector("button[text='Borrowed']"));
 		borrowedButton.click();
 		assertNotNull(gui.theTextArea.getItems());
-	} 
-	
+	}
+
 	// Test user input with search text "mat" and "search" button
 	@Test
-	public void testCheckUserInput( ) {	
+	public void testCheckUserInput() {
 		WebElement search = driver.findElement(By.cssSelector("text-field"));
 		WebElement searchButton = driver.findElement(By.cssSelector("button[text='Search']"));
 		search.sendKeys("mat");
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(searchButton));
 		searchButton.click();
-		assertTrue(controller.checkUserInput("mat"));		
-		}
-	
+		assertTrue(controller.checkUserInput("mat"));
+	}
+
 	// Test user input with search text in digits "366665" and "search" button
 	@Test
-	public void testCheckInputOnlyDigits( ) {
+	public void testCheckInputOnlyDigits() {
 		WebElement search = driver.findElement(By.cssSelector("text-field"));
 		WebElement searchButton = driver.findElement(By.cssSelector("button[text='Search']"));
 		search.sendKeys("366665");
 		searchButton.click();
-		assertTrue(controller.checkInputOnlyDigits("366665"));	
-		}
-	
+		assertTrue(controller.checkInputOnlyDigits("366665"));
+	}
+
 	// Test if logout succeed with "logout" button
 	@Test
-	public void testLogoutSuccesful( ) {
+	public void testLogoutSuccesful() {
 		WebElement logoutButton = driver.findElement(By.cssSelector("button[text='Logout']"));
 		logoutButton.click();
 		assertFalse(gui.loginSuccessful);
-		}
+	}
 
 	@Override
 	protected Scene getScene() {
