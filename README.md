@@ -1,4 +1,4 @@
-# :sparkles: Media-Library-JavaFX-with-JUnit5-testing :sparkles:
+# :sparkles: Media Library JavaFX with JUnit5 testing :sparkles:
 "Media Library" app - refactoring Swing app to JavaFx app and testing in JUnit - school project at Test driven development in Java course (2020)
 
 ## :pushpin: _GUI with JavaFX and examples_
